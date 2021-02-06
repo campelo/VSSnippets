@@ -1,0 +1,107 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Sync Fact Unit Test</Title>
+            <Shortcut>fact</Shortcut>
+            <Description>Code snippet for sync fact unit test</Description>
+            <Author>Flávio Campelo</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>Action</ID>
+					<Default>Creating</Default>
+                    <ToolTip>Action to do. Generally aswering the question WHAT or WHEN sometimes. (Creating, Updating, Deleting...)</ToolTip>
+                </Literal>
+                <Literal>
+                    <ID>Scenario</ID>
+					<Default>WithValidValue</Default>
+                    <ToolTip>Details for this specific test scenario. You could use WHEN, WITH or WITHOUT to help you. (WithCorrectFields, WithInvalidValues, WithoutRequiredField...)</ToolTip>
+                </Literal>
+				<Literal>
+                    <ID>ExpectedResult</ID>
+					<Default>ShouldReturnSuccess</Default>
+                    <ToolTip>Expected behaviour. Use some modals to help you with, like SHOULD or MUST. (ShouldBeCreated, ShouldThrowNotFoundExeception, MustBeGreatherThan0)</ToolTip>
+                </Literal>
+            </Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+				<Import>
+					<Namespace>Shouldly</Namespace>
+				</Import>
+			</Imports>
+            <Code Language="csharp">
+                <![CDATA[
+					[Fact]
+                    public void $Action$_$Scenario$_$ExpectedResult$()
+                    {
+                        //Arrange
+						var expectedResult = 0;
+						
+						//Action
+						var result = 0;
+						
+						//Assert
+						result.ShouldBe(expectedResult);
+                    }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Async Fact Unit Test</Title>
+            <Shortcut>factAsync</Shortcut>
+            <Description>Code snippet for async fact unit test</Description>
+            <Author>Flávio Campelo</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>Action</ID>
+					<Default>Creating</Default>
+                    <ToolTip>Action to do. Generally aswering the question WHAT or WHEN sometimes. (Creating, Updating, Deleting...)</ToolTip>
+                </Literal>
+                <Literal>
+                    <ID>Scenario</ID>
+					<Default>WithValidValue</Default>
+                    <ToolTip>Details for this specific test scenario. You could use WHEN, WITH or WITHOUT to help you. (WithCorrectFields, WithInvalidValues, WithoutRequiredField...)</ToolTip>
+                </Literal>
+				<Literal>
+                    <ID>ExpectedResult</ID>
+					<Default>ShouldReturnSuccess</Default>
+                    <ToolTip>Expected behaviour. Use some modals to help you with, like SHOULD or MUST. (ShouldBeCreated, ShouldThrowNotFoundExeception, MustBeGreatherThan0)</ToolTip>
+                </Literal>
+            </Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+				<Import>
+					<Namespace>Shouldly</Namespace>
+				</Import>
+				<Import>
+					<Namespace>System.Threading.Tasks</Namespace>
+				</Import>
+			</Imports>
+            <Code Language="csharp">
+                <![CDATA[
+					[Fact]
+                    public async Task $Action$_$Scenario$_$ExpectedResult$()
+                    {
+                        //Arrange
+						var expectedResult = 0;
+						
+						//Action
+						var result = 0;
+						
+						//Assert
+						result.ShouldBe(expectedResult);
+                    }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
