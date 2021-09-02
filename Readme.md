@@ -5,7 +5,13 @@ Put all or someone of those snippets on following folder:
 %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets
 ```
 
-You maybe should to use this sequence to get a copy for a existing directory.
+You can copy and paste the content of the file or clone the repo using this command:
+
+```
+git clone git@github.com:campelo/VSSnippets.git
+```
+
+You also can use this sequence from an existing directory to get the files and submit new PRs later.
 
 ```
 git init
